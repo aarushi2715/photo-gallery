@@ -3,7 +3,7 @@ import { useState , useCallback, useMemo, useReducer, useEffect} from 'react';
 import { favouritesReducer } from '../reducers/favouritesReducer.jsx';
 import useFetchPhotos from '../hooks/useFetchPhotos.js';
 import PhotoCard from "./PhotoCard";
-
+    
 
 const getInitialFavourites = () => {
             const savedFavourites = localStorage.getItem("favourites");
@@ -83,7 +83,7 @@ const Gallery = () =>{
                     />
               </div>
 
-            <div className="max-w-7xl mx-auto px-5 md:px-8">
+            <div className="max-w-[1800px] mx-auto px-5 md:px-8">
 
             {/* Heading */}
             <div className="relative text-center mb-12">
@@ -106,7 +106,7 @@ const Gallery = () =>{
             </div>
 
             {/* Responsive Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
                 {filteredPhotos.map((photo, index) => (
                 <PhotoCard
                     key={photo.id}

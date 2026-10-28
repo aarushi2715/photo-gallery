@@ -1,0 +1,67 @@
+@import "tailwindcss";
+.jim-nightshade-regular {
+  font-family: "Jim Nightshade", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes enterFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes enterFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.enter-left {
+  animation: enterFromLeft 0.6s ease-out both;
+}
+
+.enter-right {
+  animation: enterFromRight 0.6s ease-out both;
+}
+
+@media (min-width: 768px) {
+  .photo-card-0,
+  .photo-card-2 {
+    animation-name: enterFromLeft;
+  }
+
+  .photo-card {
+  animation: enterFromLeft 0.6s ease-out both;
+}
+
+  .photo-card-1,
+  .photo-card-3 {
+    animation-name: enterFromRight;
+  }
+}
+
+@media (min-width: 1024px) {
+  .photo-card-0,
+  .photo-card-1 {
+    animation-name: enterFromLeft;
+  }
+
+  .photo-card-2,
+  .photo-card-3 {
+    animation-name: enterFromRight;
+  }
+}
